@@ -1,0 +1,66 @@
+.main {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  justify-items: flex-start;
+  grid-template-columns: 60vw;
+  padding: 1rem 0;
+  overflow-y: auto;
+  row-gap: 2rem;
+  padding-left: 20vw;
+}
+.reviewContainer {
+  background-color: #36383a;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr;
+  width: 50%;
+}
+.reviewRight {
+  display: grid;
+  grid-template-rows: 70% 30%;
+  place-items: center;
+  padding: 10px 0;
+}
+.reviewRight > img {
+  border-radius: 50%;
+  height: 100%;
+}
+.reviewList {
+  display: grid;
+  width: 100%;
+  row-gap: 1rem;
+}
+
+.reviewLeft {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 100%;
+  padding-left: 5px;
+}
+.reviewLeft a {
+  width: fit-content;
+  height: fit-content;
+}
+.reviewLeft a strong {
+  text-decoration: underline;
+}
+.reviewLeft p {
+  width: 100%;
+  overflow-wrap: break-word;
+}
+.ratingWrapper {
+  height: fit-content;
+  width: fit-content;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.ratingWrapper i {
+  color: white;
+}
+.posted {
+  width: max-content;
+}

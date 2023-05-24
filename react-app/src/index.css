@@ -1,0 +1,248 @@
+/* TODO Add site wide styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+div#root {
+  height: 100vh;
+  min-height: 100%;
+  overflow: hidden;
+  text-rendering: optimizeSpeed;
+  position: relative;
+  line-height: 1.5;
+  background-color: #202225;
+  color: rgb(254, 254, 254);
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  font-family: Roboto, "Helvetica Neue";
+}
+:root {
+  --dark-background-color: #202225;
+  --primary: #8a2be2;
+  --secondary: #31bacd;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+input:not(.slider),
+textarea,
+select {
+  -webkit-appearance: none;
+  background-color: inherit;
+  border: none;
+}
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+.primary-button,
+.primary-link,
+.secondary-link,
+.secondary-button {
+  font-size: 1rem;
+  background-color: var(--primary) !important;
+  width: fit-content;
+  padding: 1ch 2ch !important;
+  border-radius: 2rem !important;
+  justify-self: flex-end;
+  border: none !important;
+  cursor: pointer;
+  height: max-content;
+}
+.secondary-link,
+.secondary-button {
+  background-color: var(--secondary) !important;
+}
+::-webkit-scrollbar {
+  background: none !important;
+  border-radius: 10px;
+  margin: 5px 5px;
+  width: 14px;
+  z-index: 100;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+a#forward {
+  margin-right: 10%;
+}
+.disabled {
+  background-color: lightgray !important;
+  pointer-events: none !important;
+}
+button.none {
+  font-size: 1.5rem;
+  background: none;
+  width: fit-content;
+  justify-self: flex-end;
+  border: none;
+  cursor: pointer;
+  height: max-content;
+}
+
+span.tags {
+  color: white;
+  padding: 0.2ch 1ch;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+span.tags.casual {
+  background-color: #c724b1;
+}
+span.tags.simulation {
+  background-color: #4d4dff;
+}
+
+span.tags.action {
+  background-color: #ffad00;
+}
+span.tags.strategy {
+  background-color: #d22730;
+}
+span.tags.adventure {
+  background-color: #db3eb1;
+}
+span.tags.rpg {
+  background-color: #44d62c;
+}
+span.tags.sports {
+  background-color: #00feca;
+}
+span.tags.racing {
+  background-color: #ff9472;
+}
+span.tags.mmo {
+  background-color: #00207f;
+}
+span.tags.rts {
+  background-color: #f85125;
+}
+span.tags.horror {
+  background-color: #ff006a;
+}
+span.tags.platformer {
+  background-color: #7fff00;
+}
+
+button.delete {
+  background-color: red !important;
+}
+div.main {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.unloaded {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1000;
+  background-color: var(--dark-background-color);
+  transition: background-color 3s ease-in, height 0s 3s;
+}
+.loaded {
+  background-color: transparent;
+  height: 0;
+}
+
+.unloaded > div {
+  width: 50vw;
+  height: 40vh;
+  position: absolute;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 2s ease-in;
+}
+.loaded > div {
+  opacity: 0;
+  visibility: hidden;
+}

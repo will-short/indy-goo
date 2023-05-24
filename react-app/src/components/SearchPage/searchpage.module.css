@@ -1,0 +1,64 @@
+.main {
+  display: grid;
+  grid-template-columns: 25% 70%;
+  padding: 4rem 10%;
+  column-gap: 5%;
+}
+.gameList {
+  display: grid;
+  height: 80vh;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  overflow-y: auto;
+}
+.gameCard {
+  background-color: #36383a !important;
+  padding-bottom: 10px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.main > aside h4 {
+  background-color: grey;
+}
+.main > aside {
+  display: grid;
+  row-gap: 2rem;
+  grid-template-rows: 1fr 1fr 2fr;
+}
+.main > aside > div {
+  border: 1px solid grey;
+  min-height: 100px;
+}
+.byPrice > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.byPrice {
+  display: grid;
+  grid-template-rows: auto 1fr 1fr;
+}
+.byPrice h3 {
+  text-align: center;
+}
+.byTags > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 1rem;
+}
+.byTags > div > span {
+  cursor: pointer;
+  height: max-content;
+}
+.activeTag {
+  padding: 0.5ch 2ch !important;
+}

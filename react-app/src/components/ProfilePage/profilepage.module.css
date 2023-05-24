@@ -1,0 +1,39 @@
+.main {
+  display: grid;
+  width: 100%;
+  justify-content: flex-start;
+  grid-template-columns: 60vw;
+  margin: 1rem 0.5%;
+  grid-template-rows: 14rem 1fr;
+  row-gap: 2rem;
+  overflow: auto;
+  padding-left: 20vw;
+}
+
+.gameList {
+  height: 100%;
+  display: grid;
+  row-gap: 1rem;
+}
+.swap {
+  display: flex;
+  justify-content: center;
+}
+.swap > button {
+  width: 50%;
+  background-color: var(--dark-background-color);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+.swap > button:not(.inactive) {
+  pointer-events: none;
+}
+.inactive {
+  background-color: #1a1b1e !important;
+  cursor: pointer;
+}
+.reviewList {
+  display: grid;
+  gap: 1rem;
+}

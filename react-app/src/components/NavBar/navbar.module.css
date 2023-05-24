@@ -1,0 +1,111 @@
+nav {
+  background-color: #4d4e51;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  max-width: 90rem;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5rem;
+  gap: 1rem;
+  height: 100%;
+  position: relative;
+}
+.homeLink {
+  height: 40%;
+  margin-right: 1rem;
+}
+.link > * {
+  height: 100%;
+}
+.signIn,
+.user,
+.cart {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  height: 24px;
+}
+.signIn {
+  width: 48px;
+}
+
+.userControls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: 1rem;
+}
+.user {
+  position: relative;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+.user > img {
+  height: 100%;
+  border-radius: 50%;
+}
+.user span:last-of-type {
+  font-size: 18px;
+}
+.userControls a {
+  height: 24px;
+}
+
+.postedProgress {
+  height: 1.5rem;
+  width: 100vw;
+  position: absolute;
+  bottom: -0.6rem;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: linear-gradient(
+    to left,
+    var(--dark-background-color) 50%,
+    var(--secondary) 50%
+  );
+  background-size: 200% 100%;
+  animation: spinner 35s linear;
+}
+
+@keyframes spinner {
+  0% {
+    background-position: 100% bottom;
+  }
+  20% {
+    background-position: 50% bottom;
+  }
+  40% {
+    background-position: 30% bottom;
+  }
+  50% {
+    background-position: 20% bottom;
+  }
+  70% {
+    background-position: 10% bottom;
+  }
+  80% {
+    background-position: 9% bottom;
+  }
+  85% {
+    background-position: 8% bottom;
+  }
+  90% {
+    background-position: 7% bottom;
+  }
+  95% {
+    background-position: 6% bottom;
+  }
+  100% {
+    background-position: 5% bottom;
+  }
+}

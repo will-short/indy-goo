@@ -1,0 +1,107 @@
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100% !important;
+}
+.carousel {
+  grid-row: span 2;
+  position: relative;
+  height: max-content;
+}
+.carousel > span {
+  position: absolute;
+  height: 50%;
+  width: max-content;
+  display: flex;
+  padding: 0 5px;
+  align-items: center;
+  top: 25%;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel > span:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.carousel > span:first-of-type {
+  left: 0;
+}
+.carousel > span:last-of-type {
+  right: 0;
+}
+.carousel > *:nth-child(2) {
+  display: block;
+}
+.container img {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.gameInfo {
+  background-color: #1a1b1e;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr 4rem;
+  grid-template-columns: 65% auto;
+  grid-auto-flow: column;
+  column-gap: 1%;
+}
+
+.rating,
+.release,
+.price,
+.tags {
+  width: 100%;
+  color: grey;
+  justify-self: start;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.owner {
+  align-self: center;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.owner > a strong {
+  text-decoration: underline;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  height: max-content;
+  align-self: center;
+}
+
+.carousel img {
+  display: none;
+}
+.info {
+  margin-bottom: auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5, auto);
+  grid-auto-flow: column;
+  row-gap: 5px;
+}
+.gameView {
+  position: relative;
+}
+.gameView:hover > .overLay {
+  visibility: visible;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+  opacity: 1;
+}
+.overLay {
+  position: absolute;
+  visibility: hidden;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  opacity: 0;
+}
